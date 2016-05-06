@@ -1,0 +1,29 @@
+﻿@model List<TrabalhoBiblioteca.Models.BookViewModel>
+
+    <div class="row">
+        <h1>Biblioteca</h1>
+        <div class="col-md-12">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <td>Id</td>
+                        <td>Nome</td>
+                        <td>Autor</td>
+                        <td>Categoria</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var livro in @Model.ToList())
+                    {
+                        
+                        <tr>
+                            <td>@livro.Id</td>
+                            <td>@livro.Name</td>
+                            <td>@livro.Autor</td>
+                            <td>@livro.Categoria</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
